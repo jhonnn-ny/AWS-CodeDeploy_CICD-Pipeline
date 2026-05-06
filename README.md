@@ -1,3 +1,7 @@
+*Lab provided by AWS Instructure*
+
+
+
 # **Lab 13.1: Automating Code Deployments with a CI/CD Pipeline**
 
 ## **Lab overview and objectives**
