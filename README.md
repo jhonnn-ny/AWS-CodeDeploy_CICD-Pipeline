@@ -22,11 +22,13 @@ Mateo, a café regular and AWS consultant who specializes in automating repeatab
 
 When you *start* the lab, many services are deployed for you. In this lab, you will focus on the services that are represented in the following diagram. As in past labs, the VS Code IDE is used as the development environment. The developer runs commands from VS Code IDE to update the code in the S3 bucket that hosts the website. The second bucket in the diagram will be used to set up a continuous integration and continuous delivery (CI/CD) pipeline.
 
-![image.png](attachment:49d61f45-7525-44e1-867e-1b31843a9cef:image.png)
+<img width="849" height="343" alt="1" src="https://github.com/user-attachments/assets/8c6da63d-7484-40f5-a438-c30d5193a6b5" />
+
 
 By the *end* of this lab, you will have created the architecture in the following diagram. You will have created a CodeCommit repository to store the website code. You will have also created a CodePipeline pipeline to automate updates to the website when changes are pushed to the CodeCommit repository. Artifacts that CodePipeline uses to deploy and update your website application will be hosted on an S3 bucket that is separate from the bucket that hosts the café website.
 
-![image.png](attachment:5613c28f-d750-4913-9426-6df7ea0dfab4:image.png)
+<img width="804" height="346" alt="2" src="https://github.com/user-attachments/assets/5fe2a90b-5abe-440b-bfa9-8415558e4f22" />
+
 
 ## **Task 1: Preparing the development environment**
 
@@ -40,7 +42,8 @@ Before you can start working on this lab, you must import some files and install
         - In a new browser tab, paste the value for **LabIDEURL** to open the VS Code IDE.
         - On the prompt window **Welcome to code-server**, enter the value for **LabIDEPassword** you copied to the editor earlier, choose **Submit** to open the VS Code IDE.
         
-        ![image.png](attachment:a5348417-72bd-4f0a-862b-32202ddc5c23:image.png)
+       <img width="919" height="999" alt="3" src="https://github.com/user-attachments/assets/85e1c690-48eb-47dc-a7c6-9d90b252c88d" />
+
         
 1. Download and extract the files that you need for this lab.
     - In the VS Code IDE bash terminal (at the bottom of the IDE), run the following command:
@@ -49,7 +52,8 @@ Before you can start working on this lab, you must import some files and install
         wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACCDEV-2-91558/13-lab-ci-cd/code.zip -P /home/ec2-user/environment
         ```
         
-        ![image.png](attachment:2d8185ed-10c3-49cb-8854-6aaf13e42bbe:image.png)
+       <img width="1558" height="362" alt="4" src="https://github.com/user-attachments/assets/8ea02f5f-13b6-4bb6-8820-346278614885" />
+
         
     - Notice that a **code.zip** file was downloaded to the VS Code IDE. The file is listed in the Environment window.
     - Extract the file:
@@ -133,7 +137,8 @@ In this task, you will create a CodeCommit repository to host the café website 
         - **Commit message:** Enter `This is my first commit.`
         - Choose **Commit changes**.
         
-        ![image.png](attachment:7e3605bb-6c09-46af-b992-d26722300c13:image.png)
+        <img width="922" height="993" alt="5" src="https://github.com/user-attachments/assets/96b91590-7eec-4675-abb7-b010fb6f97f0" />
+
         
 3. Review your commit.
     - In the left navigation pane, under **Repositories**, choose **Commits**.
@@ -288,7 +293,8 @@ So far, you have been running commands from VS Code IDE to update the code in th
     
 7. Choose the **cafe_website_front_end_pipeline** hyperlink and review the pipeline status, as shown in the following image.
     
-    ![image.png](attachment:e0d84456-f0db-4ba8-a697-15d8556825dc:image.png)
+    <img width="1184" height="1500" alt="6" src="https://github.com/user-attachments/assets/00a9488a-e44f-4e98-b1a7-199fb4d346f7" />
+
     
     The pipeline should deploy successfully. Code was deployed using CodeCommit as the source and the café website S3 bucket as the target. This means the bucket should have been updated with the *test.html* file.
     
@@ -308,7 +314,8 @@ So far, you have been running commands from VS Code IDE to update the code in th
         
         You reach a sample webpage similar to the following:
         
-        ![image.png](attachment:7f5ca3f3-9213-4ab1-90c2-b354ea002a6d:image.png)
+        <img width="954" height="252" alt="7" src="https://github.com/user-attachments/assets/a278c6de-a10a-4842-a4f8-69a4b862bd6d" />
+
         
     - Keep this browser tab open. You will return to it later.
 
@@ -344,7 +351,8 @@ It's more efficient to edit code in an IDE than it is to use the CodeCommit cons
         
     - Note that the file is also visible in the explorer
     
-    ![image.png](attachment:b8189e3b-7507-4cef-b885-a104432309e3:image.png)
+    <img width="266" height="197" alt="8" src="https://github.com/user-attachments/assets/cfb6ad64-525b-4eef-92d0-dfbaf74f0bf7" />
+
     
 
 You now have a local clone of your repository that can be edited using your IDE. Next, you will lean how to manage your local copy of the repository and synchronize changes with CodeCommit.
@@ -368,7 +376,8 @@ You can interact with the repository through the command line, but VS Code provi
     
     - From the explorer menu, expand the **front_end_website** folder to reveal the **test.html** file, which is shown in the following image.
     
-    ![image.png](attachment:f71c7042-4266-4fab-ac22-98816512b4cf:image.png)
+   <img width="685" height="268" alt="9" src="https://github.com/user-attachments/assets/98b678a1-e96d-4f52-b7ac-5f825b2c9b6b" />
+
     
     - Open the **test.html** file and edit the page title on line 4. Replace the current title with the following text:
         
@@ -407,7 +416,8 @@ git status
     - Choose the link for the commit ID with the most recent commit date.
     - Go to the **test.html** section, and notice the highlighted lines, which are shown in the following image.
     
-    ![image.png](attachment:fd39baa9-13cc-408b-a660-311b2f49aff6:image.png)
+    <img width="1087" height="675" alt="10" src="https://github.com/user-attachments/assets/901ef474-f0cf-416d-be7c-4f6e6dccf247" />
+
     
 
 The first highlighted line is preceded by a minus sign (-) and highlighted in red. This shows the contents of the line before the change was made. The second highlighted line is preceded by a plus sign (+) and highlighted in green. This line shows the current content of the line.
@@ -418,7 +428,8 @@ Great work! You have confirmed that VS Code IDE is able to push changes to your 
     
     Notice that the browser tab title has changed, as shown in the following image. This proves that the pipeline deployed the changes that you committed from your local repository.
     
-    ![image.png](attachment:f56a0b49-b2dd-474e-9725-19a26a04f6c0:image.png)
+    <img width="430" height="134" alt="11" src="https://github.com/user-attachments/assets/8ae6efa6-fc3b-4373-a8cc-aaa1bc61e9ce" />
+
     
 
 **Note:** You might need to refresh the page a few times before you see the new tab title.
@@ -432,7 +443,8 @@ In this task, you will first remove the test.html file. Then, you will update th
 1. Return to the VS Code IDE tab.
 2. On the explorer, Under *Environment* folder, expand the **front_end_website** folder and delete the **test.html** file, as shown in the following image.
 
-![image.png](attachment:eca96696-3ff9-4f07-b667-afce6f8c4994:image.png)
+<img width="514" height="586" alt="12" src="https://github.com/user-attachments/assets/9373b05e-5df4-4959-be64-8527c8132527" />
+
 
 1. In the VS Code IDE bash terminal, run the following commands.
     
@@ -452,7 +464,8 @@ rm -r ./resources/website
 
 Now, your local repository has the folder structure shown in the following image:
 
-![image.png](attachment:a7edfccc-abc4-468f-95e5-53b6a3982df0:image.png)
+<img width="302" height="333" alt="13" src="https://github.com/user-attachments/assets/81f8b040-f1f5-4161-a527-1059cac80173" />
+
 
 1. Commit your changes.
     - Choose the *Branch* icon (now it is showing number of new files to be pushed).
@@ -478,7 +491,8 @@ Now, your local repository has the folder structure shown in the following image
     - Choose **pastries.js**.
     - Choose the **Headers** tab, and locate the **Response Headers** section, as shown in the following image.
         
-        ![image.png](attachment:799217c5-f8e1-409d-be70-40f13feb7030:image.png)
+       <img width="1148" height="1120" alt="14" src="https://github.com/user-attachments/assets/e04ab3ca-954b-4362-937f-f218d3f7627f" />
+
         
         Notice that the **cache-control** value is set to *max-age=14*, which indicates that pipeline updated the cache settings. This means that the website is being built from the  most recent repository update.
         
@@ -486,9 +500,3 @@ Now, your local repository has the folder structure shown in the following image
         
 
 Congratulations! You have moved the codebase to a secure and scalable managed service. You have also ensured that the website will stay up to date with the latest improvements.
-
-## **Update from the café**
-
-![image.png](attachment:56e78cc9-4ae7-4302-bc7d-964ec6779885:image.png)
-
-This is a big win for the café! Now that the codebase is centralized, the café can bring in more developers to collaborate and enhance the site as the business grows. Sofía doesn't have to remember to update the website, because the CI/CD pipeline will automatically deploy changes to the website. She can track versioning and implement a code approval process. If any issues arise from updates, she can use CodeCommit to review commit logs to trace changes and resolve code bugs.
