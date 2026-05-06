@@ -1,9 +1,9 @@
 *Lab provided by AWS Instructure*
 
 
-# 🚀 AWS CodeDeploy CI/CD Pipeline
+#  AWS CodeDeploy CI/CD Pipeline
 
-## 📌 Overview
+##  Overview
 
 This project demonstrates the implementation of a complete **CI/CD pipeline on AWS**, integrating GitHub as the source and automating deployments to EC2 instances using AWS CodeDeploy.
 
@@ -11,7 +11,7 @@ It simulates a real-world continuous delivery workflow, enabling fast, reliable,
 
 ---
 
-## 🧱 Solution Architecture
+##  Solution Architecture
 
 Pipeline workflow:
 
@@ -27,7 +27,7 @@ GitHub → CI/CD Pipeline → AWS CodeDeploy → EC2
 
 ---
 
-## ⚙️ Technologies Used
+##  Technologies Used
 
 * AWS CodeDeploy
 * AWS EC2 (Free Tier)
@@ -38,7 +38,7 @@ GitHub → CI/CD Pipeline → AWS CodeDeploy → EC2
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 .
@@ -53,14 +53,14 @@ GitHub → CI/CD Pipeline → AWS CodeDeploy → EC2
 
 ---
 
-## 🔄 CI/CD Pipeline
+##  CI/CD Pipeline
 
-### 🔹 Continuous Integration (CI)
+###  Continuous Integration (CI)
 
 * Version control using GitHub
 * Automatic trigger on every push
 
-### 🔹 Continuous Delivery (CD)
+###  Continuous Delivery (CD)
 
 * Fully automated deployment with AWS CodeDeploy
 * Lifecycle hooks execution:
@@ -72,7 +72,7 @@ GitHub → CI/CD Pipeline → AWS CodeDeploy → EC2
 
 ---
 
-## 📜 appspec.yml
+##  appspec.yml
 
 Defines deployment behavior:
 
@@ -88,7 +88,7 @@ BeforeInstall → AfterInstall → ApplicationStart
 
 ---
 
-## 🖥️ Environment
+##  Environment
 
 * EC2 Instance (Free Tier)
 * Ubuntu Linux
@@ -101,27 +101,27 @@ BeforeInstall → AfterInstall → ApplicationStart
 
 ---
 
-## 📊 Simulated Results & Impact
+##  Simulated Results & Impact
 
 To demonstrate real-world value, the following improvements were achieved:
 
-* ⏱️ **Deployment Time Reduction:** ~70% faster (manual → automated)
-* 🔁 **Deployment Consistency:** 100% standardized deployments via scripts
-* ❌ **Failure Rate Reduction:** ~60% fewer human-related errors
-* 🚀 **Lead Time for Changes:** Reduced from hours to minutes
-* 🔄 **Rollback Capability:** Faster recovery using CodeDeploy revision control
+*  **Deployment Time Reduction:** ~70% faster (manual → automated)
+*  **Deployment Consistency:** 100% standardized deployments via scripts
+*  **Failure Rate Reduction:** ~60% fewer human-related errors
+*  **Lead Time for Changes:** Reduced from hours to minutes
+*  **Rollback Capability:** Faster recovery using CodeDeploy revision control
 
 These metrics reflect typical gains when transitioning from manual deployment to automated CI/CD pipelines.
 
 ---
 
-## 📈 DevOps & ATS Keywords
+##  DevOps & ATS Keywords
 
 CI/CD • AWS • CodeDeploy • EC2 • Cloud Computing • DevOps • Continuous Delivery • Continuous Integration • Infrastructure Automation • Deployment Automation • Linux • Shell Script • YAML • GitHub • Version Control • Cloud Infrastructure • Release Management • Application Lifecycle • Automation • DevOps Practices • Monitoring • Scalability • Reliability
 
 ---
 
-## 📈 Best Practices Applied
+##  Best Practices Applied
 
 * Automated deployments with version-controlled scripts
 * Infrastructure and application separation
@@ -131,7 +131,7 @@ CI/CD • AWS • CodeDeploy • EC2 • Cloud Computing • DevOps • Continuo
 
 ---
 
-## 🎯 Project Goals
+##  Project Goals
 
 * Build hands-on experience with AWS CI/CD tools
 * Apply DevOps best practices in a real scenario
@@ -139,7 +139,7 @@ CI/CD • AWS • CodeDeploy • EC2 • Cloud Computing • DevOps • Continuo
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add AWS CodePipeline (full orchestration)
 * Integrate AWS CodeBuild
@@ -149,7 +149,7 @@ CI/CD • AWS • CodeDeploy • EC2 • Cloud Computing • DevOps • Continuo
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Jhonatan Alves**
 Aspiring Cloud & DevOps Engineer
@@ -157,14 +157,14 @@ Focus: AWS | Automation | Infrastructure
 
 ---
 
-## 📬 Contact
+##  Contact
 
 * LinkedIn: https://www.linkedin.com/in/jhonatan-alves0
 * GitHub: https://github.com/jhonnn-ny
 
 ---
 
-## ⭐ Final Notes
+##  Final Notes
 
 This project showcases practical experience in building and automating cloud-based deployments using AWS, aligned with modern DevOps practices.
 
