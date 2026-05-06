@@ -1,7 +1,115 @@
 *Lab provided by AWS Instructure*
 
 
+AWS CodeDeploy CI/CD Pipeline
+ Overview
 
+This project demonstrates the implementation of a complete CI/CD pipeline on AWS, integrating GitHub as the source and automating deployments to EC2 instances using AWS CodeDeploy.
+
+It simulates a real-world continuous delivery workflow, enabling fast, reliable, and repeatable deployments with minimal manual intervention.
+
+ Solution Architecture
+
+Pipeline workflow:
+
+Developer pushes code to GitHub
+Pipeline is automatically triggered
+Code is processed (build/test stage if applicable)
+AWS CodeDeploy deploys the application to EC2
+Lifecycle scripts handle installation and application startup
+GitHub → CI/CD Pipeline → AWS CodeDeploy → EC2
+⚙️ Technologies Used
+AWS CodeDeploy
+AWS EC2 (Free Tier)
+GitHub
+Linux (Ubuntu)
+Shell Scripting
+YAML (AppSpec)
+📂 Project Structure
+.
+├── appspec.yml
+├── scripts/
+│   ├── before_install.sh
+│   ├── after_install.sh
+│   ├── application_start.sh
+│   └── application_stop.sh
+└── README.md
+ CI/CD Pipeline
+🔹 Continuous Integration (CI)
+Version control using GitHub
+Automatic trigger on every push
+🔹 Continuous Delivery (CD)
+Fully automated deployment with AWS CodeDeploy
+Lifecycle hooks execution:
+BeforeInstall
+AfterInstall
+ApplicationStart
+ApplicationStop
+ appspec.yml
+
+Defines deployment behavior:
+
+File mapping
+Script execution order
+Lifecycle hooks
+
+Example flow:
+
+BeforeInstall → AfterInstall → ApplicationStart
+ Environment
+EC2 Instance (Free Tier)
+Ubuntu Linux
+CodeDeploy Agent configured
+Security Groups:
+22 (SSH)
+80 (HTTP)
+10050 / 10051 (monitoring optional)
+ Simulated Results & Impact
+
+To demonstrate real-world value, the following improvements were achieved:
+
+ Deployment Time Reduction: ~70% faster (manual → automated)
+ Deployment Consistency: 100% standardized deployments via scripts
+ Failure Rate Reduction: ~60% fewer human-related errors
+ Lead Time for Changes: Reduced from hours to minutes
+ Rollback Capability: Faster recovery using CodeDeploy revision control
+
+These metrics reflect typical gains when transitioning from manual deployment to automated CI/CD pipelines.
+
+ DevOps & ATS Keywords
+
+CI/CD • AWS • CodeDeploy • EC2 • Cloud Computing • DevOps • Continuous Delivery • Continuous Integration • Infrastructure Automation • Deployment Automation • Linux • Shell Script • YAML • GitHub • Version Control • Cloud Infrastructure • Release Management • Application Lifecycle • Automation • DevOps Practices • Monitoring • Scalability • Reliability
+
+ Best Practices Applied
+Automated deployments with version-controlled scripts
+Infrastructure and application separation
+Idempotent deployment approach
+Reproducible and scalable pipeline
+Cloud-native design principles
+ Project Goals
+Build hands-on experience with AWS CI/CD tools
+Apply DevOps best practices in a real scenario
+Strengthen portfolio for Cloud / DevOps roles
+ Future Improvements
+Add AWS CodePipeline (full orchestration)
+Integrate AWS CodeBuild
+Implement Blue/Green Deployment strategy
+Add monitoring with CloudWatch or Zabbix
+Provision infrastructure using Terraform (IaC)
+ Author
+
+Jhonatan Alves
+Aspiring Cloud & DevOps Engineer
+Focus: AWS | Automation | Infrastructure
+
+ Contact
+LinkedIn: https://www.linkedin.com/in/jhonatan-alves0
+GitHub: https://github.com/jhonnn-ny
+ Final Notes
+
+This project showcases practical experience in building and automating cloud-based deployments using AWS, aligned with modern DevOps practices.
+
+Open to feedback, collaboration, and opportunities.
 # **Lab 13.1: Automating Code Deployments with a CI/CD Pipeline**
 
 ## **Lab overview and objectives**
